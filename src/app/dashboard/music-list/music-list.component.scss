@@ -1,0 +1,21 @@
+.music-list--container {
+  padding: 15px;
+  background-color: rgb(47, 47, 47);
+  min-height: 100vh;
+
+  .table {
+    background-color: rgb(58, 58, 58);
+
+    tr:hover {
+      background-color: rgba(124, 124, 124, 0.37);
+    }
+
+    td, th {
+      color: white;
+    }
+
+    .active {
+      color: #1DB954;
+    }
+  }
+}

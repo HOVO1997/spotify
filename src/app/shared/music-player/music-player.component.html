@@ -1,0 +1,18 @@
+<div class="player--container">
+  <div class="actions--container">
+    <mat-icon matRipple fontIcon="skip_previous" color="primary" class="icon" (click)="prev()"></mat-icon>
+    <mat-icon matRipple [fontIcon]="actionIcon" color="primary" class="icon" (click)="play()"></mat-icon>
+    <mat-icon matRipple fontIcon="skip_next" color="primary" class="icon" (click)="next()"></mat-icon>
+  </div>
+  <div class="waveform--container">
+    <div class="time">{{time}}</div>
+    <div #waveform></div>
+    <div class="duration">{{duration}}</div>
+  </div>
+  <div class="sound-volume--container">
+    <mat-icon [fontIcon]="soundValueIcon" color="primary"></mat-icon>
+    <mat-slider color="primary">
+      <input type="range" matSliderThumb [formControl]="soundVolumeControl">
+    </mat-slider>
+  </div>
+</div>

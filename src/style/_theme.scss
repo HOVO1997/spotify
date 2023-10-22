@@ -1,0 +1,151 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$md-primary: (
+  50 : #e4f7ea,
+  100 : #bbeacc,
+  200 : #8edcaa,
+  300 : #61ce87,
+  400 : #3fc46e,
+  500 : #1db954,
+  600 : #1ab24d,
+  700 : #15aa43,
+  800 : #11a23a,
+  900 : #0a9329,
+  A100 : #c1ffcc,
+  A200 : #8effa3,
+  A400 : #5bff79,
+  A700 : #41ff64,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$md-accent: (
+  50 : #e0e5f3,
+  100 : #b3bde2,
+  200 : #8091ce,
+  300 : #4d65ba,
+  400 : #2644ac,
+  500 : #00239d,
+  600 : #001f95,
+  700 : #001a8b,
+  800 : #001581,
+  900 : #000c6f,
+  A100 : #9ea2ff,
+  A200 : #6b71ff,
+  A400 : #3840ff,
+  A700 : #1f28ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$md-warn: (
+  50: #fcf2e7,
+  100: #f8dec3,
+  200: #f3c89c,
+  300: #eeb274,
+  400: #eaa256,
+  500: #e69138,
+  600: #e38932,
+  700: #df7e2b,
+  800: #db7424,
+  900: #d56217,
+  A100: #ffffff,
+  A200: #ffe3d4,
+  A400: #ffc3a1,
+  A700: #ffb287,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$md-error: (
+  50: #f9e0e0,
+  100: #f0b3b3,
+  200: #e68080,
+  300: #db4d4d,
+  400: #d42626,
+  500: #cc0000,
+  600: #c70000,
+  700: #c00000,
+  800: #b90000,
+  900: #ad0000,
+  A100: #ffd7d7,
+  A200: #ffa4a4,
+  A400: #ff7171,
+  A700: #ff5858,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$my-primary: mat.define-palette($md-primary);
+$my-accent: mat.define-palette($md-accent);
+$my-warn: mat.define-palette($md-error);
+
+$my-theme: mat.define-light-theme(
+    (
+      color: (
+        primary: $my-primary,
+        accent: $my-accent,
+        warn: $my-warn,
+      ),
+    )
+);
+
+@include mat.all-component-themes($my-theme);
+

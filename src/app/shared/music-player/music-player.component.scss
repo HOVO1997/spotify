@@ -1,0 +1,45 @@
+.player--container {
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  .waveform--container {
+    flex: 3;
+    position: relative;
+    .time {
+      position: absolute;
+      color: white;
+      left: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px;
+    }
+    .duration {
+      position: absolute;
+      color: white;
+      right: -35px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 12px
+    }
+  }
+  .actions--container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    .icon {
+      width: 40px;
+      height: 40px;
+      font-size: 36px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+  .sound-volume--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
